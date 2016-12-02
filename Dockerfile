@@ -16,6 +16,7 @@ RUN wget --no-cookies --no-check-certificate \
 RUN yum -y groupinstall "Development Tools"
 
 RUN curl -L https://cpanmin.us/ -o /usr/bin/cpanm && chmod +x /usr/bin/cpanm
+RUN cpanm --notest App::Sqitch
 
 RUN curl -L https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o /usr/bin/lein && chmod +x /usr/bin/lein
 
